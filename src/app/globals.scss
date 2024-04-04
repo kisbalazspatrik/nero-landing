@@ -12,3 +12,9 @@ body {
     text-wrap: balance;
   }
 }
+
+.full-width {
+  min-width: 100%;
+  min-width: -moz-available;
+  min-width: -webkit-fill-available;
+}
