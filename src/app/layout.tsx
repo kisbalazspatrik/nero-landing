@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Saira } from "next/font/google";
 import "./globals.scss";
 import SummaryLargeImage from "#/summary-large-image.png";
@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     default: "Nero - next.js template",
   },
   description: "Template for NextJS apps",
-  themeColor: "#000000",
   icons: [
     {
       rel: "icon",
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
       url: FavIcon.src,
     },
   ],
-  viewport: "width=device-width, initial-scale=1",
   metadataBase: new URL("https://nero.nfteam.eu"),
   openGraph: {
     title: "Nero - next.js template",
@@ -57,6 +55,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://nero.nfteam.eu",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
