@@ -3,6 +3,8 @@ import { Saira } from "next/font/google";
 import "./globals.scss";
 import SummaryLargeImage from "#/summary-large-image.png";
 import FavIcon from "#/favicon.png";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 const saira = Saira({ subsets: ["latin"] });
 
@@ -70,7 +72,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={saira.className}>{children}</body>
+      <body
+        className={`${saira.className} min-h-dvh flex flex-col justify-center items-center`}
+      >
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
