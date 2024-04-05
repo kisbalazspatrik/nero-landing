@@ -1,14 +1,36 @@
+/* eslint-disable @next/next/no-img-element */
 import Button from "@/components/button";
+import Container from "@/components/container";
+import SectionCTA from "@/components/sectionCta";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function Home() {
   return (
-    <main className="full-width border-neutral-700 sm:border max-w-[1200px] sm:m-2 p-3 justify-center flex items-center flex-col">
-      <p>Nero</p>
-      <div className="flex flex-row">
-        <Button type="solid">Solid</Button>
-        <Button type="outline">Solid</Button>
-        <Button type="link">Solid</Button>
-      </div>
-    </main>
+    <>
+      <Container className="flex-col p-3">
+        <p>Nero</p>
+        <div className="flex flex-row">
+          <Button type="solid">Solid</Button>
+          <Button type="outline">Outline</Button>
+          <Button type="link">Link</Button>
+        </div>
+      </Container>
+      <SectionCTA
+        imgSrc="/latest-drop.png"
+        imgAlt="NFT Drop"
+        headline="Featured"
+        title="Latest NFT Drop"
+        description="Dive into the 'Digital Dreamscape' collection, where each
+          NFT serves as a gateway to immersive virtual worlds. Crafted by
+          visionary artists, this series blends surreal landscapes with
+          futuristic motifs, offering collectors a piece of the metaverse's
+          untapped beauty and potential."
+        button={{
+          text: "Check it out",
+          href: "#",
+          rightIcon: <BsArrowRight />,
+        }}
+      />
+    </>
   );
 }
