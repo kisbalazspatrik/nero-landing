@@ -14,7 +14,7 @@ body {
 }
 
 .full-width {
-  min-width: 100%;
-  min-width: -moz-available;
-  min-width: -webkit-fill-available;
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
 }
