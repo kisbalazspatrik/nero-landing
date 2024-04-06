@@ -1,21 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
 import Button from "@/components/button";
 import Container from "@/components/container";
-import SectionCTA from "@/components/sectionCta";
+import CTA from "@/components/cta";
+import Partners from "@/components/partners";
 import { BsArrowRight } from "react-icons/bs";
 
 export default function Home() {
   return (
     <>
-      <Container className="flex-col p-3">
-        <p>Nero</p>
+      <Container className="flex-col">
         <div className="flex flex-row">
           <Button type="solid">Solid</Button>
           <Button type="outline">Outline</Button>
           <Button type="link">Link</Button>
         </div>
       </Container>
-      <SectionCTA
+      <Partners />
+      <CTA
         imgSrc="/latest-drop.png"
         imgAlt="NFT Drop"
         headline="Featured"
