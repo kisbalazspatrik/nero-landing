@@ -1,23 +1,31 @@
 import React from "react";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Container from "../container";
+import { cn } from "@/utils/tailwindMerge";
+import { transition } from "@/utils/tailwindClasses";
 
 const Footer = () => {
   return (
-    <div className="full-width border-neutral-700 border max-w-[1200px] sm:m-2 justify-between flex items-center flex-row">
-      <p className="p-3 text-sm font-thin text-neutral-300">
+    <Container className={`justify-between`}>
+      <p className="p-3 text-sm font-light text-neutral-300">
         © {new Date().getFullYear()} Nero
       </p>
-      <div className="flex sm:border-l border-neutral-700">
+      <div className="flex border-l border-neutral-700">
         {SocialItems.map((item, index) => (
           <a key={index} href={item.href} target="_b">
-            <div className="flex p-3 text-xl font-thin transition-all duration-150 ease-in-out text-neutral-300 hover:text-black hover:bg-white">
+            <div
+              className={cn(
+                `flex p-3 text-xl font-light text-neutral-300 hover:text-black hover:bg-white`,
+                transition
+              )}
+            >
               <item.icon />
             </div>
           </a>
         ))}
       </div>
-    </div>
+    </Container>
   );
 };
 

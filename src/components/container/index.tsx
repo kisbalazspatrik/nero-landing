@@ -1,3 +1,5 @@
+import { siteMaxWidth } from "@/utils/tailwindClasses";
+import { cn } from "@/utils/tailwindMerge";
 import React, { FC, HTMLProps, ReactNode } from "react";
 
 interface ContainerProps {
@@ -8,7 +10,11 @@ interface ContainerProps {
 const Container: FC<ContainerProps> = ({ children, className }) => {
   return (
     <div
-      className={`full-width border-neutral-700 border max-w-[1200px] sm:m-2 justify-center flex items-center m-3 ${className}`}
+      className={cn(
+        `full-width border-neutral-700 border sm:m-2 justify-center flex items-center m-3`,
+        className,
+        siteMaxWidth
+      )}
     >
       {children}
     </div>

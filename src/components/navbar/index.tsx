@@ -1,22 +1,30 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { transition } from "@/utils/tailwindClasses";
+import { siteMaxWidth, transition } from "@/utils/tailwindClasses";
 import React, { useState } from "react";
+import Container from "../container";
+import { cn } from "@/utils/tailwindMerge";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative full-width border-neutral-700 border max-w-[1200px] sm:m-2 justify-between flex items-stretch flex-row">
+    <Container className={`relative justify-between items-stretch`}>
       <a href="/" className="flex items-center group">
         <img
           src="/favicon.png"
           alt="Nero"
-          className={`p-5 ${transition} size-[72px] invert group-hover:bg-white group-hover:invert-0`}
+          className={cn(
+            `p-5 size-[72px] invert group-hover:bg-white group-hover:invert-0`,
+            transition
+          )}
         />
         <p
-          className={`px-3 text-lg font-semibold ${transition} text-neutral-300 group-hover:text-white`}
+          className={cn(
+            `px-3 text-lg font-semibold text-neutral-300 group-hover:text-white`,
+            transition
+          )}
         >
           Nero
         </p>
@@ -27,7 +35,10 @@ const Navbar = () => {
             key={index}
             href={item.href}
             target="_b"
-            className={`flex items-center px-5 group hover:bg-white hover:text-black text-sm font-thin ${transition} text-neutral-300`}
+            className={cn(
+              `flex items-center px-5 group hover:bg-white hover:text-black text-sm font-light text-neutral-300`,
+              transition
+            )}
           >
             {item.name}
           </a>
@@ -35,11 +46,13 @@ const Navbar = () => {
       </div>
       <div className="flex md:hidden">
         <div
-          className={`flex items-center p-5 
-            ${transition} 
-            ${isOpen ? "bg-white" : "bg-transparent"} 
-            ${isOpen ? "text-black" : "text-neutral-300"}
-          `}
+          className={cn(
+            `flex items-center p-5 
+          `,
+            transition,
+            isOpen ? "bg-white" : "bg-transparent",
+            isOpen ? "text-black" : "text-neutral-300"
+          )}
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
@@ -59,19 +72,22 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="absolute left-0 z-10 w-full mt-px bg-black border-b top-full border-neutral-700">
+        <div className="absolute left-0 z-10 w-full mt-px bg-black border-b border-r border-l top-full border-neutral-700">
           {MenuItems.map((item, index) => (
             <a
               key={index}
               href={item.href}
-              className={`flex px-5 py-5 text-white bg-black border-0 hover:bg-white hover:text-black ${transition}`}
+              className={cn(
+                `flex px-5 py-5 text-white bg-black border-0 hover:bg-white hover:text-black`,
+                transition
+              )}
             >
               {item.name}
             </a>
           ))}
         </div>
       )}
-    </div>
+    </Container>
   );
 };
 
