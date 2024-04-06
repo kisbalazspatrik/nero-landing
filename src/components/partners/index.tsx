@@ -11,7 +11,10 @@ const Partners = () => {
         <p className="uppercase">Partnerships</p>
       </Container>
       <div
-        className={cn(`grid grid-cols-3 md:grid-cols-6 w-full`, siteMaxWidth)}
+        className={cn(
+          `grid grid-cols-3 mx-3 sm:mx-2 md:grid-cols-6 full-width`,
+          siteMaxWidth
+        )}
       >
         {PartnerList.map((partner) => (
           <a key={partner.name} href="#">
