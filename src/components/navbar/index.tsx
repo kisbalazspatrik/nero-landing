@@ -1,10 +1,10 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-import { siteMaxWidth, transition } from "@/utils/tailwindClasses";
+import { transition } from "@/utils/tailwindClasses";
 import React, { useState } from "react";
 import Container from "../container";
 import { cn } from "@/utils/tailwindMerge";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +12,13 @@ const Navbar = () => {
   return (
     <Container className={`relative justify-between items-stretch`}>
       <a href="/" className="flex items-center group">
-        <img
+        <Image
           src="/favicon.png"
           alt="Nero"
+          width={72}
+          height={72}
           className={cn(
-            `p-5 size-[72px] invert group-hover:bg-white group-hover:invert-0`,
+            `p-5  invert group-hover:bg-white group-hover:invert-0`,
             transition
           )}
         />

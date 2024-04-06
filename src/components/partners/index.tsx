@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Container from "../container";
 import { siteMaxWidth, transition } from "@/utils/tailwindClasses";
 import { cn } from "@/utils/tailwindMerge";
+import Image from "next/image";
 
 const Partners = () => {
   return (
@@ -15,9 +15,11 @@ const Partners = () => {
       >
         {PartnerList.map((partner) => (
           <a key={partner.name} href="#">
-            <img
+            <Image
               src={partner.imgSrc}
               alt={partner.name}
+              width={512}
+              height={512}
               className={cn(`w-full h-auto bg-black hover:invert`, transition)}
             />
           </a>
