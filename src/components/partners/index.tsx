@@ -1,13 +1,19 @@
 import React from "react";
 import Container from "../container";
-import { siteMaxWidth, transition } from "@/utils/tailwindClasses";
+import {
+  insidePadding,
+  siteMaxWidth,
+  transition,
+} from "@/utils/tailwindClasses";
 import { cn } from "@/utils/tailwindMerge";
 import Image from "next/image";
 
 const Partners = () => {
   return (
     <>
-      <Container className="flex-col p-3 md:p-6 mb-0 sm:mb-0 items-start">
+      <Container
+        className={`flex-col ${insidePadding} mb-0 sm:mb-0 items-start`}
+      >
         <p className="uppercase">Partnerships</p>
       </Container>
       <div
