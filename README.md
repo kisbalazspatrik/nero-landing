@@ -1,3 +1,7 @@
+<a href="https://github.com/kisbalazspatrik/nero-landing/">
+    <img width="100%" src="https://i.imgur.com/dbcd1nI.png">
+  </a>
+
 # Nero: Next.js Landing Page Template
 
 Nero is a modern and sleek landing page template built with Next.js. It's designed to provide an engaging and visually appealing experience for showcasing NFT projects, digital art collections, or any creative endeavor in the blockchain space.
