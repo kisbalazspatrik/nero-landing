@@ -5,7 +5,7 @@ import Button from "../button";
 export const Hero = () => {
   return (
     <Container>
-      <div className="flex flex-col items-center justify-center py-16 px-2">
+      <div className="flex flex-col items-center justify-center py-16 px-2 bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/hero.png')]">
         <p className="mb-2 text-xs font-semibold uppercase text-neutral-300 sm:text-sm md:text-base">
           COMING SOON
         </p>

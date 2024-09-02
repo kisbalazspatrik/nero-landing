@@ -29,15 +29,11 @@ export default function Home() {
         reverse
       />
       <CTA
-        imgSrc="/latest-drop.png"
+        imgSrc="/exclusive.png"
         imgAlt="NFT Drop"
-        headline="Featured"
-        title="Latest NFT Drop"
-        description="Dive into the 'Digital Dreamscape' collection, where each
-          NFT serves as a gateway to immersive virtual worlds. Crafted by
-          visionary artists, this series blends surreal landscapes with
-          futuristic motifs, offering collectors a piece of the metaverse's
-          untapped beauty and potential."
+        headline="Exclusive"
+        title="Nero Exclusive"
+        description="Nero Exclusive is a collection of 1000 unique NFTs that are only available to Nero holders. Each NFT is a piece of art that is only available to Nero holders."
         button={{
           text: "Check it out",
           href: "#",
