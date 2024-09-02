@@ -23,7 +23,7 @@ const Partners = () => {
         )}
       >
         {PartnerList.map((partner) => (
-          <a key={partner.name} href="#">
+          <a key={partner.name} href={partner.link} target="_blank">
             <Image
               src={partner.imgSrc}
               alt={partner.name}
@@ -42,62 +42,62 @@ const PartnerList = [
   {
     name: "NFTeam",
     imgSrc: "/partners/nfteam.png",
-    link: "#",
+    link: "https://nfteam.eu",
   },
   {
     name: "Monochroma",
     imgSrc: "/partners/monochroma.png",
-    link: "#",
+    link: "https://monochroma.hu",
   },
   {
     name: "NFTeam",
     imgSrc: "/partners/nfteam.png",
-    link: "#",
+    link: "https://nfteam.eu",
   },
   {
     name: "Monochroma",
     imgSrc: "/partners/monochroma.png",
-    link: "#",
+    link: "https://monochroma.hu",
   },
   {
     name: "NFTeam",
     imgSrc: "/partners/nfteam.png",
-    link: "#",
+    link: "https://nfteam.eu",
   },
   {
     name: "Monochroma",
     imgSrc: "/partners/monochroma.png",
-    link: "#",
+    link: "https://monochroma.hu",
   },
   {
     name: "NFTeam",
     imgSrc: "/partners/nfteam.png",
-    link: "#",
+    link: "https://nfteam.eu",
   },
   {
     name: "Monochroma",
     imgSrc: "/partners/monochroma.png",
-    link: "#",
+    link: "https://monochroma.hu",
   },
   {
     name: "NFTeam",
     imgSrc: "/partners/nfteam.png",
-    link: "#",
+    link: "https://nfteam.eu",
   },
   {
     name: "Monochroma",
     imgSrc: "/partners/monochroma.png",
-    link: "#",
+    link: "https://monochroma.hu",
   },
   {
     name: "NFTeam",
     imgSrc: "/partners/nfteam.png",
-    link: "#",
+    link: "https://nfteam.eu",
   },
   {
     name: "Monochroma",
     imgSrc: "/partners/monochroma.png",
-    link: "#",
+    link: "https://monochroma.hu",
   },
 ];
 
